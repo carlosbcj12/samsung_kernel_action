@@ -4,7 +4,7 @@ on:
     inputs:
       ROOTDIR_BRANCH:
         description: 'Bazel Rootdir Branch to build'
-        default: 'master-G'
+        default: 'lineage-24.0'
         required: true
       ROOTDIR_URL:
         description: 'Bazel Rootdir Repository URL'
