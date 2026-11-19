@@ -12,7 +12,7 @@ on:
         required: true
       KERNEL_BRANCH:
         description: 'ACK Kernel branch to build'
-        default: 'android15-6.6-lts'
+        default: 'lineage-24.0'
         required: true
       KERNELSU:
         description: 'Compile with KernelSU'
@@ -31,12 +31,6 @@ jobs:
 
     - name: Cleanup
       uses: rokibhasansagar/slimhub_actions@main
-
-    - name: Prepare dependencies
-      run: |
-        sudo apt update -y
-        sudo apt install rsync bc cpio flex bison aptitude aria2 git python-is-python3 tar perl wget curl lz4 ccache -y
-        sudo aptitude install libssl-dev -y
 
     - name: Clone Kernel Source
       run: |
