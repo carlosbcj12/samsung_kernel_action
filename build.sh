@@ -7,7 +7,7 @@ set -e
 SECONDS=0
 USER="rsuntk"
 HOSTNAME="yukiprjkt-lab"
-DEVICE_TARGET=${DEVICE_TARGET:-"a12snsxx"}
+DEVICE_TARGET=${DEVICE_TARGET:-"a13snsxx"}
 TC_DIR="$HOME/neutron-clang"
 OUT_DIR="$(pwd)/out"
 KCFLAGS_W=${KCFLAGS_W:-"false"}
