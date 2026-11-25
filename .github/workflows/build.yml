@@ -12,16 +12,17 @@ on:
         required: true
       DEVICE_TARGET:
         description: 'Target device to build'
-        default: 'a12snsxx'
+        default: 'a13snsxx'
         type: choice
         options:
           - a12snsxx
           - a21snsxx
           - m12nsxx
+          - a13snsxx
       KSU:
         description: 'Add KernelSU support'
         type: boolean
-        default: false
+        default: true
       KSU_BRANCH:
         description: 'KernelSU branch'
         required: true
