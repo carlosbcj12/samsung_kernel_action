@@ -101,6 +101,12 @@ jobs:
         if [ ! -d ~/.ccache ]; then
           mkdir -p ~/.ccache
         fi
+        
+        device_defconfig="arch/arm64/configs/${{ inputs.DEVICE_TARGET }}_defconfig"
+        if [ -f ../config.gz ]; then
+          zcat ../config.gz > "$device_defconfig"
+        fi
+        
         # Handel KSU
         if [[ "$KSU" == "true" ]]; then
           device_defconfig="arch/arm64/configs/${{ inputs.DEVICE_TARGET }}_defconfig"
